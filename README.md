@@ -1,10 +1,8 @@
 # sqlmap Cookbook
 
-Cookbook to download and install the latest version of
-[sqlmap](http://sqlmap.org/), the SQL injection and database takeover tool,
-from Github.
+Cookbook to download and install the latest version of [sqlmap](http://sqlmap.org/), the SQL injection and database takeover tool, from Github.
 
-# Requirements
+## Requirements
 
 The following cookbooks are prerequisites:
 
@@ -15,9 +13,21 @@ The following cookbooks are prerequisites:
 
 Note: Only tested under Ubuntu 12.04 LTS 64-bit.
 
-# Usage
+## Usage
 
-To spin up an Ubuntu install using [Vagrant](http://vagrantup.com):
+Instructions on how to spin up an Ubuntu install using [Vagrant](http://vagrantup.com):
+
+### Install Vagrant
+
+Install Vagrant '>= 1.5.2' from the [Vagrant downloads page](http://www.vagrantup.com/downloads.html)
+
+Install the [Vagrant Berkshelf plugins](https://github.com/berkshelf/vagrant-berkshelf):
+```
+vagrant plugin install hashie --plugin-version '2.1.1'
+vagrant plugin install vagrant-berkshelf --plugin-version '>= 2.0.1
+```
+
+### Pull down Vagrant configuration & Chef cookbook
 
 ```
 git clone https://github.com/werrett/sqlmap-cookbook.git sqlmap-vm
@@ -28,17 +38,17 @@ vagrant ssh
 ./sqlmap.py --version
 ```
 
-# Attributes
+## Attributes
 
   * directory - Where sqlmap will live.
   * url - Github URL to clone sqlmap from.
   * reference - Branch to clone from.
   * clone_timeout - Cloning time out. Needs to be longish.
 
-# Todo
+## Todo
 
   * Install from Tarball.
 
-# Author
+## Author
 
 Jonathan Werrett (<jonathan@werrett.hk>)
