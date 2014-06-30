@@ -1,4 +1,4 @@
-name             'sqlmap'
+name             'sqlmap-cookbook'
 maintainer       'Jonathan Werrett'
 maintainer_email 'jonathan@werrett.hk'
 license          'MIT'
