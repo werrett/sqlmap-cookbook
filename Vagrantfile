@@ -13,9 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.omnibus.chef_version = :latest
 
   config.vm.provision :chef_solo do |chef|
-    chef.run_list = [
-        "recipe[apt]",
-        "recipe[sqlmap]"
-    ]
+    chef.add_recipe "apt"
+    chef.add_recipe "sqlmap"
   end
 end
